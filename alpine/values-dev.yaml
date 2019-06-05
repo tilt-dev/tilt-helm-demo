@@ -1,0 +1,6 @@
+image:
+  repository: alpine-dev
+  tag: latest
+  pullPolicy: Never
+
+restartPolicy: Never
