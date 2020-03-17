@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: {{ template "alpine.fullname" . }}
+  name: "{{.Release.Name | lower}}"
   labels:
     # The "app.kubernetes.io/managed-by" label is used to track which tool deployed a given chart.
     # It is useful for admins who want to see what releases a particular tool
@@ -9,11 +9,10 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
     # The "app.kubernetes.io/instance" convention makes it easy to tie a release to all of the
     # Kubernetes resources that were created as part of that release.
-    app.kubernetes.io/instance: {{ .Release.Name | quote }}
+    app.kubernetes.io/instance: {{ .Release.Name | lower | quote }}
     app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
     # This makes it easy to audit chart usage.
     helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    app.kubernetes.io/name: {{ template "alpine.name" . }}
 spec:
   # This shows how to use a simple value. This will look for a passed-in value called restartPolicy.
   restartPolicy: {{ .Values.restartPolicy }}
