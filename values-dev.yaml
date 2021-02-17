@@ -1,5 +1,5 @@
 image:
-  repository: alpine-dev
+  repository: busybox-dev
   tag: latest
   pullPolicy: Never
 

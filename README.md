@@ -15,8 +15,6 @@ See the [Tiltfile](Tiltfile) for more details on how to configure Tilt with helm
 
 ## License
 
-Copyright 2019 Windmill Engineering
+Copyright 2019 Tilt Dev
 
 Licensed under [the Apache License, Version 2.0](LICENSE)
-
-Based on the Helm [alpine example](https://github.com/helm/helm/tree/master/docs/examples/alpine).
