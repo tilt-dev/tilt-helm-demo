@@ -1,5 +1,5 @@
-name: alpine
-description: Deploy a basic Alpine Linux pod
+name: busybox
+description: Deploy a basic Busybox pod
 version: 0.1.0
 home: https://github.com/helm/helm
 sources:

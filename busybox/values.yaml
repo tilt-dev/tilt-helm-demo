@@ -1,6 +1,5 @@
 image:
-  repository: alpine
+  repository: busybox
   tag: latest
   pullPolicy: IfNotPresent
 
-restartPolicy: Never
