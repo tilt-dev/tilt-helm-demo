@@ -2,10 +2,10 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: tiltdev/tilt:latest
+      - image: docker/tilt:latest
 
     steps:
       - setup_remote_docker
       - checkout
-      - run: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-      - run: with-kind-cluster.sh tilt ci
+      - run: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-4 | bash
+      - run: ctlptl create cluster kind --registry=ctlptl-registry && tilt ci
